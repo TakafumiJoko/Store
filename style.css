@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2, h3 {
+  font-size: 16px;
+}
+
+a, p, li {
+  font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  padding: 100px;
+}
+
+header {
+  background-image: url("img/mainvisual.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+}
+
+header .logo {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.section-title,
+.section-text {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#magazine .section-title,
+#magazine .section-text,
+#fashion .section-title,
+#fashion .section-text {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.item {
+  width: 50%;
+  height: 50%;
+}
+
+#magazine .item {
+  position: relative;
+}
+
+@media (max-width: 896px) {
+  .contents {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100%;
+  }
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.inner h3,
+.inner p {
+  color: white;
+}
+
+.section-link {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+#fashion .section-link {
+  margin-bottom: 25px;
+}
+
+#fashion img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.catalog-antique {
+  background-color: whitesmoke;
+}
+
+.catalog-antique .item:last-child,
+.catalog-antique .item:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.catalog-antique .section-title {
+  text-align: center;
+} 
+
+.catalog-antique:last-child .item:last-child {
+  order: -1;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 896px) {
+ 
+  footer .item:nth-child(2),
+  footer .item:nth-child(3) {
+    text-align: left;
+  }
+}
+
+footer .contents {
+  background-color: black;
+  color: white;
+  padding: 100px;
+  align-items: flex-start;
+}
+
+.title {
+  margin-bottom: 25px;
+}
+
+footer p {
+  margin: 25px 0;
+}
+
+.list li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
